@@ -1,144 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strand Solution Enterprises</title>
+    <title>Strands Solution Enterprises | Luxury Wig Services</title>
     <style>
-        body { background-color: #fafaf9; font-family: 'Segoe UI', sans-serif; padding: 15px; text-align: center; color: #1c1917; }
-        .app-container { background: white; padding: 25px; border-radius: 20px; box-shadow: 0px 10px 30px rgba(0,0,0,0.08); max-width: 500px; margin: auto; border-top: 6px solid #be185d; }
-        
-        .logo-container img { max-width: 120px; height: auto; border-radius: 50%; margin-bottom: 10px; border: 3px solid #fdf2f8; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h1 { color: #be185d; margin-bottom: 5px; font-size: 22px; text-transform: uppercase; letter-spacing: 1px; }
-        .tagline { color: #701a75; font-weight: bold; margin-top: 0; font-size: 11px; margin-bottom: 20px; letter-spacing: 0.5px; }
-        
-        .section-label { background: #fdf2f8; padding: 8px; border-radius: 5px; font-weight: bold; color: #be185d; margin-top: 20px; text-align: left; font-size: 13px; }
-        label { display: block; margin-top: 15px; font-weight: 600; text-align: left; font-size: 13px; color: #444; }
-        input, select { width: 100%; padding: 14px; margin-top: 6px; border: 1px solid #e7e5e4; border-radius: 10px; box-sizing: border-box; font-size: 15px; outline: none; background: #fff; }
-        
-        .terms-link { font-size: 12px; color: #db2777; text-decoration: underline; cursor: pointer; margin-top: 15px; display: inline-block; font-weight: 600; }
+        :root {
+            --berry: #be185d;
+            --plum: #701a75;
+            --gold: #d4af37;
+            --bg: #fffcfc;
+        }
 
-        /* Policy Modal */
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); backdrop-filter: blur(4px); }
-        .modal-content { background-color: white; margin: 10% auto; padding: 25px; border-radius: 20px; width: 85%; max-width: 450px; text-align: left; position: relative; max-height: 80vh; overflow-y: auto; }
-        .close-btn { color: #be185d; position: absolute; right: 15px; top: 10px; font-size: 28px; font-weight: bold; cursor: pointer; }
-        .modal-content h3 { color: #be185d; border-bottom: 2px solid #fdf2f8; padding-bottom: 10px; margin-top: 0; }
-        .modal-content ul { padding-left: 20px; font-size: 14px; color: #444; line-height: 1.8; }
+        body { 
+            background-color: var(--bg); 
+            font-family: 'Times New Roman', serif; 
+            margin: 0; 
+            color: #1c1917;
+            text-align: center;
+        }
 
-        button { background-color: #25d366; color: white; border: none; width: 100%; padding: 18px; margin-top: 25px; border-radius: 12px; font-size: 17px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        button:hover { background-color: #1ebe57; }
+        /* BIG LOGO SECTION */
+        .header {
+            background: linear-gradient(135deg, var(--berry), var(--plum));
+            color: white;
+            padding: 50px 20px; /* Increased padding for more space */
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .logo-container {
+            width: 160px; /* Increased from 110px to 160px */
+            height: 160px; /* Increased from 110px to 160px */
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--gold);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the logo fills the circle properly */
+        }
+
+        .tagline { 
+            color: var(--gold); 
+            font-weight: bold; 
+            font-size: 1rem; 
+            letter-spacing: 3px; 
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        h1 { font-size: 2.2rem; margin: 0; letter-spacing: 1px; }
+
+        .container {
+            max-width: 550px;
+            margin: -30px auto 50px;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-section { text-align: left; }
+        label { display: block; font-weight: bold; margin-bottom: 8px; color: var(--plum); font-size: 0.9rem; text-transform: uppercase; }
+
+        select, input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            background: #fafafa;
+        }
+
+        .policy-card {
+            background: #fdf2f8;
+            border-left: 5px solid var(--berry);
+            padding: 20px;
+            margin: 25px 0;
+            font-size: 0.95rem;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .order-btn {
+            background: var(--berry);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(190, 24, 93, 0.2);
+        }
     </style>
 </head>
 <body>
 
-<div class="app-container">
+<div class="header">
     <div class="logo-container">
-        <img src="1000332448.jpg" alt="Logo">
+        <img src="my_logo.png" alt="Strand Solution Logo" onerror="this.src='https://via.placeholder.com/160?text=LOGO+HERE'">
     </div>
+    <div class="tagline">Luxury Artistry</div>
     <h1>Strand Solution</h1>
-    <p class="tagline">LUXURY WIG SERVICES & VENTILATION</p>
-
-    <label>Client Full Name</label>
-    <input type="text" id="custName" placeholder="Enter name">
-
-    <div class="section-label">SELECT SERVICE</div>
-    <select id="serviceSelected">
-        <optgroup label="Closure Ventilation">
-            <option value="2x4 Closure Ventilation|9000">2x4 Closure - ₦9,000</option>
-            <option value="4x4 Closure Ventilation|13000">4x4 Closure - ₦13,000</option>
-            <option value="5x5 Closure Ventilation|19000">5x5 Closure - ₦19,000</option>
-            <option value="6x6 Closure Ventilation|24000">6x6 Closure - ₦24,000</option>
-            <option value="7x7 Closure Ventilation|28000">7x7 Closure - ₦28,000</option>
-            <option value="13x4 Frontal Ventilation|33000">13x4 Frontal - ₦33,000</option>
-            <option value="13x5 Frontal Ventilation|38000">13x5 Frontal - ₦38,000</option>
-            <option value="13x6 Frontal Ventilation|45000">13x6 Frontal - ₦45,000</option>
-        </optgroup>
-        <optgroup label="Wigging Services">
-            <option value="Basic Wigging|10000">Basic Wigging - ₦10,000</option>
-            <option value="Wigging & Styling|20000">Wigging & Styling - ₦20,000</option>
-            <option value="Machine Wigging|20000">Machine Wigging - ₦20,000</option>
-        </optgroup>
-        <optgroup label="Repairs & Styling">
-            <option value="Closure Repair|2000">Closure Repair - From ₦2,000</option>
-            <option value="Styling Service|5000">Styling Services - From ₦5,000</option>
-            <option value="Wig Revamp|0">Wig Revamp - Request Quote</option>
-            <option value="Lace Materials|0">Lace Materials - Request Price</option>
-        </optgroup>
-    </select>
-    
-    <label>Order Type (Timeline)</label>
-    <select id="orderType">
-        <option value="Standard (2 Weeks)|0">Standard (2 Weeks) - +₦0</option>
-        <option value="Rush Order|5000">Rush Order (Fast Track) - +₦5,000</option>
-    </select>
-
-    <span class="terms-link" onclick="toggleModal()">📜 Read Business Policy & Deposit Terms</span>
-
-    <label>Delivery/Pickup Address</label>
-    <input type="text" id="custAddress" placeholder="Enter your full address">
-
-    <button onclick="orderViaWhatsApp()">Place Order (WhatsApp)</button>
 </div>
 
-<div id="termsModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="toggleModal()">&times;</span>
-        <h3>Business Policy</h3>
-        <ul>
-            <li><strong>70% non-refundable deposit</strong> required before production begins.</li>
-            <li>All prices are <strong>fixed and strictly non-negotiable</strong>.</li>
-            <li>Production timeline is <strong>two (2) weeks</strong>.</li>
-            <li>Pressure work is <strong>not accepted</strong>.</li>
-            <li>Rush orders attract an additional <strong>₦5,000 fee</strong>.</li>
-            <li>Pick-up dates must be strictly adhered to.</li>
-            <li>Full balance payment is required before collection.</li>
-        </ul>
+<div class="container">
+    <div class="service-section">
+        <label>Your Name</label>
+        <input type="text" id="custName" placeholder="Enter Full Name">
+
+        <label>Select Service</label>
+        <select id="serviceSelected">
+            <optgroup label="Ventilation Artistry">
+                <option value="2x4 Ventilation|9000">2x4 Ventilation - ₦9,000</option>
+                <option value="4x4 Ventilation|20000">4x4 Ventilation - ₦20,000</option>
+                <option value="13x4 Ventilation|55000">13x4 Ventilation - ₦55,000</option>
+                <option value="13x6 Ventilation|60000">13x6 Ventilation - ₦60,000</option>
+            </optgroup>
+            <optgroup label="Wig Construction">
+                <option value="Hand Wigging|10000">Hand Wigging - ₦10,000</option>
+                <option value="Machine Wigging|20000">Machine Wigging - ₦20,000</option>
+            </optgroup>
+            <optgroup label="Revamp Services">
+                <option value="Curly Revamp|16000">Curly Revamp - from ₦16,000</option>
+                <option value="Straight Revamp|14000">Straight Revamp - from ₦14,000</option>
+                <option value="Bouncy Revamp|15000">Bouncy Revamp - from ₦15,000</option>
+            </optgroup>
+        </select>
+
+        <label>Timeline</label>
+        <select id="orderType">
+            <option value="Standard (2 Weeks)|0">Standard - 2 Weeks</option>
+            <option value="Rush Order|5000">Rush Order - +₦5,000</option>
+        </select>
+
+        <div class="policy-card">
+            <strong>Business Policy:</strong>
+            <ul>
+                <li>70% non-refundable deposit required.</li>
+                <li>Fixed pricing; No negotiations.</li>
+                <li>Production timeline: 2 weeks.</li>
+            </ul>
+        </div>
+
+        <button class="order-btn" onclick="sendOrder()">Book Appointment</button>
     </div>
 </div>
 
 <script>
-    function toggleModal() {
-        let modal = document.getElementById("termsModal");
-        modal.style.display = (modal.style.display === "block") ? "none" : "block";
-    }
+    function sendOrder() {
+        const phone = "2348000000000"; // REPLACE WITH YOUR NUMBER
+        const name = document.getElementById('custName').value;
+        const service = document.getElementById('serviceSelected').value.split('|');
+        const rush = document.getElementById('orderType').value.split('|');
 
-    function orderViaWhatsApp() {
-        let myNumber = "+2348147040257"; // REPLACE WITH YOUR NUMBER
-        
-        let name = document.getElementById("custName").value;
-        let serviceData = document.getElementById("serviceSelected").value.split('|');
-        let rushData = document.getElementById("orderType").value.split('|');
-        
-        let serviceName = serviceData[0];
-        let basePrice = parseInt(serviceData[1]);
-        let rushFee = parseInt(rushData[1]);
-        let address = document.getElementById("custAddress").value;
+        if(!name) return alert("Please enter your name");
 
-        if (name == "" || address == "") {
-            alert("Please enter your name and address.");
-            return;
-        }
+        const total = parseInt(service[1]) + parseInt(rush[1]);
+        const deposit = total * 0.7;
 
-        let total = basePrice + rushFee;
-        let deposit = total * 0.7;
+        const text = `*NEW ORDER: STRAND SOLUTION*%0A` +
+                     `Name: ${name}%0A` +
+                     `Service: ${service[0]}%0A` +
+                     `Priority: ${rush[0]}%0A` +
+                     `Total: ₦${total.toLocaleString()}%0A` +
+                     `70% Deposit Required: ₦${deposit.toLocaleString()}`;
 
-        let totalDisplay = (total === 0) ? "Quote Required" : "₦" + total.toLocaleString();
-        let depositDisplay = (total === 0) ? "To be discussed" : "₦" + deposit.toLocaleString();
-
-        let message = "Hello *Strand Solution Enterprises*!%0A%0A" + 
-                      "*NEW ORDER*%0A" + 
-                      "--------------------------%0A" +
-                      "*Client:* " + name + "%0A" +
-                      "*Service:* " + serviceName + " (₦" + basePrice.toLocaleString() + ")%0A" +
-                      "*Timeline:* " + rushData[0] + " (+₦" + rushFee.toLocaleString() + ")%0A" +
-                      "*Total Amount:* " + totalDisplay + "%0A" +
-                      "*70% Deposit:* " + depositDisplay + "%0A" +
-                      "*Location:* " + address + "%0A%0A" +
-                      "I accept the Business Policy and understand the timeline.";
-
-        window.open("https://wa.me/" + myNumber + "?text=" + message);
+        window.open(`https://wa.me/${phone}?text=${text}`);
     }
 </script>
 
 </body>
-                </html>
-    
+</html>
